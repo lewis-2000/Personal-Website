@@ -30,7 +30,7 @@ function projects() {
       name: "SuperEats",
       description:
         "SuperEats is a food delivery application that allows users to order food from restaurants.",
-      url: "#",
+      url: "https://lemon-bush-09171081e.5.azurestaticapps.net/",
       github: "https://github.com/lewis-2000/SuperEats",
       image: Supereats,
     },
