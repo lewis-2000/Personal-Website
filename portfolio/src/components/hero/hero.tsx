@@ -1,5 +1,6 @@
 import "./hero.css";
 import Me from "../../../public/meNoBg.jpg";
+import { Link } from "react-router-dom";
 
 interface Profile {
   path: string;
@@ -11,6 +12,10 @@ function Hero() {
     path: Me,
     alt: "Hero image of Lewis Ng'ang'a the owner of the website",
   };
+
+  function handleDownload() {
+    alert("Coming soon!");
+  }
 
   return (
     <>
@@ -38,12 +43,17 @@ function Hero() {
             <h3 className="font-sm">Full Stack Developer</h3>
 
             <div className="document-group flex justify-center mt-3">
-              <button className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border-2 border-gray-400 rounded-full shadow mr-3">
+              <button
+                className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border-2 border-gray-400 rounded-full shadow mr-3"
+                onClick={handleDownload}
+              >
                 Download CV
               </button>
-              <button className="bg-gray-500 border-2 hover:border-2 hover:border-gray-500 hover:bg-transparent hover:text-gray-500 hover:shadow-xl text-white font-bold py-2 px-4 rounded-full">
-                Contact Info
-              </button>
+              <Link to="/contact">
+                <button className="bg-gray-500 border-2 hover:border-2 hover:border-gray-500 hover:bg-transparent hover:text-gray-500 hover:shadow-xl text-white font-bold py-2 px-4 rounded-full">
+                  Contact Info
+                </button>
+              </Link>
             </div>
             <div className="social-group flex justify-center mt-5 text-3xl">
               <a
