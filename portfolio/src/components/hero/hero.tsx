@@ -1,21 +1,62 @@
+import React, { useState } from "react";
 import "./hero.css";
 import Me from "../../../public/meNoBg.jpg";
 import { Link } from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha";
+import Modal from "../recaptcha/modal";
+import cv from "../../../public/CV.pdf"; // Assuming this points to your file path
 
 interface Profile {
   path: string;
   alt: string;
 }
 
-function Hero() {
+const Hero: React.FC = () => {
+  const [isVerified, setIsVerified] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const personalProfile: Profile = {
     path: Me,
     alt: "Hero image of Lewis Ng'ang'a the owner of the website",
   };
 
-  function handleDownload() {
-    alert("Coming soon!");
-  }
+  const RECAPTCHA_SITE_KEY = "6LdsugQqAAAAAKWssgyvKhqahfYjrLQQaSxnCw7b";
+
+  const handleRecaptchaChange = (value: string | null) => {
+    if (value) {
+      setIsVerified(true);
+      setIsModalOpen(false); // Close the modal on successful verification
+      console.log("reCAPTCHA verification successful");
+
+      // Initiate download immediately
+      initiateDownload();
+    }
+  };
+
+  const initiateDownload = () => {
+    console.log("Initiating download...");
+
+    const link = document.createElement("a");
+    link.href = cv; // Ensure cv points to the correct file path
+    link.download = "CV.pdf"; // Set the file name for download
+
+    // Append the link to the body to trigger the download
+    document.body.appendChild(link);
+
+    // Programmatically click the link to initiate download
+    link.click();
+
+    // Clean up: remove the link after download begins
+    document.body.removeChild(link);
+  };
+
+  const handleDownload = () => {
+    if (!isVerified) {
+      setIsModalOpen(true); // Open the reCAPTCHA modal if verification fails
+    } else {
+      initiateDownload(); // Initiate download if already verified
+    }
+  };
 
   return (
     <>
@@ -75,8 +116,14 @@ function Hero() {
         </div>
         <div className="hrr2 h-auto md:w-[50%]"></div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <ReCAPTCHA
+          sitekey={RECAPTCHA_SITE_KEY}
+          onChange={handleRecaptchaChange}
+        />
+      </Modal>
     </>
   );
-}
+};
 
 export default Hero;
