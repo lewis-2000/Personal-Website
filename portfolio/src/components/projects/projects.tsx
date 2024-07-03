@@ -1,4 +1,5 @@
 import Supereats from "../../../public/SuperEats.jpg";
+import Cinema from "../../../public/cinema.png";
 
 interface project {
   name: string;
@@ -22,9 +23,17 @@ function projects() {
       name: "Chat Mistique",
       description:
         "Chat Mistique is a chat application that allows users to chat with each other.",
-      url: "https://proud-island-0b47ac31e.5.azurestaticapps.net//",
+      url: "https://proud-island-0b47ac31e.5.azurestaticapps.net/",
       github: "https://github.com/lewis-2000/ChatMistique",
       image: "./public/chatMistique.jpg",
+    },
+    {
+      name: "Cinema",
+      description:
+        "A cinema booking web app that allows users to effortlessly browse showtimes, select seats, and purchase tickets online.",
+      url: "https://delightful-island-045b01e03.5.azurestaticapps.net/",
+      github: "https://github.com/lewis-2000/Cinema",
+      image: Cinema,
     },
     {
       name: "SuperEats",
@@ -46,10 +55,10 @@ function projects() {
         <h1 className="text-black font-semibold text-3xl">Projects</h1>
       </div>
 
-      <div className="projects-body p-4 flex justify-around flex-wrap">
+      <div className="projects-body p-4 flex justify-between flex-wrap">
         {projects.map((project, index) => (
           <div
-            className="max-w-sm rounded-lg overflow-hidden shadow-md shadow-gray-500 sm:mb-3"
+            className="max-w-sm rounded-lg overflow-hidden shadow-md shadow-gray-500 sm:mb-3 mb-3 "
             key={index}
           >
             <img
