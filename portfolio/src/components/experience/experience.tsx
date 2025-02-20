@@ -1,4 +1,4 @@
-import CSharpProgramming from "../../assets/c-sharp-dotnet-programming.png";
+import CSharpProgramming from "../../assets/c-sharp.png";
 import CProgrammingLanguage from "../../assets/c-programming.png";
 import CPlusPlus from "../../assets/c++-programming.png";
 import TypeScriptProgramming from "../../assets/typescript-programming.png";
@@ -41,7 +41,7 @@ function experience() {
     },
     {
       name: "JavaScript",
-      level: "Intermediate",
+      level: "experienced",
     },
     {
       name: "TypeScript",

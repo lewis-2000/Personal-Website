@@ -19,7 +19,7 @@ function About() {
   const experiences: Experience[] = [
     {
       name: "Full Stack Developer",
-      years: 4,
+      years: 5,
       description: "I am a Full Stack Developer",
     },
     {
@@ -68,7 +68,7 @@ function About() {
 
             <div className="about-description pr-3">
               <p className="text-gray-500">
-                With over 4 years of experience as a Full Stack Developer, I
+                With over 5 years of experience as a Full Stack Developer, I
                 have honed my skills in both front-end and back-end
                 technologies, building robust and scalable applications.
                 Additionally, I have 3 years of experience as a MicroController

@@ -18,15 +18,7 @@ interface project {
 function projects() {
   const projects: project[] = [
     {
-      name: "AI Worksheet Generator",
-      description:
-        "Wordpress Plugin that lets you create a worksheet from words by the Use of AI",
-      url: "https://github.com/lewis-2000/ai-worksheet-generator",
-      github: "https://github.com/lewis-2000/ai-worksheet-generator",
-      image: AIWorkSheetGenerator,
-    },
-    {
-      name: "FLWeb Static Engine",
+      name: "FLWeb Static Engine- Desktop",
       description:
         "A static templating engine that allows users, especially students, to easily edit content and host their online portfolios on platforms like GitHub Pages without requiring backend servers. ",
       url: "https://lewis-2000.github.io/FLWeb/",
@@ -41,6 +33,15 @@ function projects() {
       github: "https://github.com/lewis-2000/India-Interractive-Landing-Page",
       image: IndiaTourBook,
     },
+    {
+      name: "AI Worksheet Generator",
+      description:
+        "Wordpress Plugin that lets you create a worksheet from words by the Use of AI",
+      url: "https://github.com/lewis-2000/ai-worksheet-generator",
+      github: "https://github.com/lewis-2000/ai-worksheet-generator",
+      image: AIWorkSheetGenerator,
+    },
+
     {
       name: "Flammy Engine",
       description: "Game engine built with OpenGL and C++",
@@ -68,7 +69,7 @@ function projects() {
       name: "Cinema",
       description:
         "A cinema booking web app that allows users to effortlessly browse showtimes, select seats, and purchase tickets online.",
-      url: "https://delightful-island-045b01e03.5.azurestaticapps.net/",
+      url: "https://lewis-2000.github.io/Cinema/",
       github: "https://github.com/lewis-2000/Cinema",
       image: Cinema,
     },
@@ -76,7 +77,7 @@ function projects() {
       name: "SuperEats",
       description:
         "SuperEats is a food delivery application that allows users to order food from restaurants.",
-      url: "https://lemon-bush-09171081e.5.azurestaticapps.net/",
+      url: "https://lewis-2000.github.io/SuperEats-Ported/",
       github: "https://github.com/lewis-2000/SuperEats",
       image: Supereats,
     },
@@ -116,9 +117,10 @@ function projects() {
                 Github <i className="fa-brands fa-github"></i>
               </a>
               <a
-                className="bg-transparent hover:bg-gray-500 text-gray-700 font-semibold hover:text-white py-2 px-4 border border-gray-500 hover:border-transparent rounded-full"
+                className="inline-flex items-center gap-2 bg-transparent border border-gray-500 text-gray-700 font-semibold px-4 py-2 rounded-full transition-all duration-300 hover:bg-gray-500 hover:text-white hover:border-transparent"
                 href={project.url}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Live Demo <i className="fa-solid fa-link"></i>
               </a>
