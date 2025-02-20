@@ -1,7 +1,7 @@
 // Loading.tsx
 import React from "react";
 import { Player } from "@lottiefiles/react-lottie-player";
-import loadingAnimation from "../../public/loading.json"; // Update this path
+import loadingAnimation from "../assets/loading.json";
 
 const Loading: React.FC = () => {
   return (

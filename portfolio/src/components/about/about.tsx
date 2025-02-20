@@ -1,4 +1,5 @@
-﻿interface Content {
+﻿import CodeCup from "../../assets/code-cup.png";
+interface Content {
   path: string;
   alt: string;
 }
@@ -11,7 +12,7 @@ interface Experience {
 
 function About() {
   const aboutContent: Content = {
-    path: "./public/code-cup.png",
+    path: CodeCup,
     alt: "A cup with the infamous tags printed on it",
   };
 

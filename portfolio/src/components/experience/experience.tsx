@@ -1,3 +1,10 @@
+import CSharpProgramming from "../../assets/c-sharp-dotnet-programming.png";
+import CProgrammingLanguage from "../../assets/c-programming.png";
+import CPlusPlus from "../../assets/c++-programming.png";
+import TypeScriptProgramming from "../../assets/typescript-programming.png";
+import JavascriptProgramming from "../../assets/js-programming.png";
+import ReactProgramming from "../../assets/react-programming.png";
+
 interface backend {
   name: string;
   level: string;
@@ -73,28 +80,28 @@ function experience() {
 
   const technologies: technology[] = [
     {
-      path: "./public/c-programming.png",
+      path: CProgrammingLanguage,
       alt: "C programming language",
     },
     {
-      path: "./public/c-sharp-programming.png",
+      path: CSharpProgramming,
       alt: "C# programming language",
     },
     {
-      path: "./public/c++-programming.png",
+      path: CPlusPlus,
       alt: "C++ programming language",
     },
     {
-      path: "./public/typescript-programming.png",
+      path: TypeScriptProgramming,
       alt: "TypeScript programming language",
     },
     {
-      path: "./public/js-programming.png",
+      path: JavascriptProgramming,
       alt: "Javascript programming language",
     },
 
     {
-      path: "./public/react-programming.png",
+      path: ReactProgramming,
       alt: "React programming language",
     },
   ];

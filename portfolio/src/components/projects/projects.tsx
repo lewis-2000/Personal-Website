@@ -1,5 +1,11 @@
-import Supereats from "../../../public/SuperEats.jpg";
-import Cinema from "../../../public/cinema.png";
+import Supereats from "../../assets/SuperEats.jpg";
+import Cinema from "../../assets/cinema.png";
+import AIWorkSheetGenerator from "../../assets/AIWorkSheetGenerator.png";
+import FLWeb from "../../assets/FLWeb.png";
+import IndiaTourBook from "../../assets/IndiaTourBook.jpeg";
+import FlammyEngine from "../../assets/FlammyEngine.png";
+import WatchIPTV from "../../assets/watchiptv.jpg";
+import ChatMistique from "../../assets/chatMistique.jpg";
 
 interface project {
   name: string;
@@ -12,20 +18,51 @@ interface project {
 function projects() {
   const projects: project[] = [
     {
+      name: "AI Worksheet Generator",
+      description:
+        "Wordpress Plugin that lets you create a worksheet from words by the Use of AI",
+      url: "https://github.com/lewis-2000/ai-worksheet-generator",
+      github: "https://github.com/lewis-2000/ai-worksheet-generator",
+      image: AIWorkSheetGenerator,
+    },
+    {
+      name: "FLWeb Static Engine",
+      description:
+        "A static templating engine that allows users, especially students, to easily edit content and host their online portfolios on platforms like GitHub Pages without requiring backend servers. ",
+      url: "https://lewis-2000.github.io/FLWeb/",
+      github: "https://github.com/lewis-2000/FLWeb",
+      image: FLWeb,
+    },
+    {
+      name: "IndiaTourBook",
+      description:
+        "Visual Representation states and regions of India for tourist ",
+      url: "https://lewis-2000.github.io/India-Interractive-Landing-Page/",
+      github: "https://github.com/lewis-2000/India-Interractive-Landing-Page",
+      image: IndiaTourBook,
+    },
+    {
+      name: "Flammy Engine",
+      description: "Game engine built with OpenGL and C++",
+      url: "https://github.com/lewis-2000/FlammyEngine",
+      github: "https://github.com/lewis-2000/FlammyEngine",
+      image: FlammyEngine,
+    },
+    {
       name: "WatchIPTV",
       description:
         "WatchIPTV allows users to watch their favourite TV shows and movies on demand.",
-      url: "https://watchiptvtoday.com/",
+      url: "https://lewis-2000.github.io/watchiptv/",
       github: "https://github.com/lewis-2000/watchiptv",
-      image: "./public/watchiptv.jpg",
+      image: WatchIPTV,
     },
     {
       name: "Chat Mistique",
       description:
         "Chat Mistique is a chat application that allows users to chat with each other.",
-      url: "https://proud-island-0b47ac31e.5.azurestaticapps.net/",
+      url: "https://lewis-2000.github.io/ChatMistique/",
       github: "https://github.com/lewis-2000/ChatMistique",
-      image: "./public/chatMistique.jpg",
+      image: ChatMistique,
     },
     {
       name: "Cinema",
@@ -55,7 +92,7 @@ function projects() {
         <h1 className="text-black font-semibold text-3xl">Projects</h1>
       </div>
 
-      <div className="projects-body p-4 flex justify-between flex-wrap">
+      <div className="projects-body p-4 flex justify-center gap-4 flex-wrap">
         {projects.map((project, index) => (
           <div
             className="max-w-sm rounded-lg overflow-hidden shadow-md shadow-gray-500 sm:mb-3 mb-3 "

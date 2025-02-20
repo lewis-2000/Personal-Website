@@ -11,10 +11,9 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate a loading delay (e.g., fetch data, etc.)
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 4500); // Adjust the delay as needed
+    }, 4500);
 
     return () => clearTimeout(timer);
   }, []);
@@ -24,17 +23,17 @@ function App() {
   }
 
   return (
-    <>
-      <Router>
-        <Nav />
-        <div className="page-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </div>
-      </Router>
-    </>
+    <Router basename="/Personal-Website/">
+      {" "}
+      {/* ✅ Keep BrowserRouter here */}
+      <Nav />
+      <div className="page-content">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
