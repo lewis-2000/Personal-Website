@@ -1,6 +1,6 @@
 import Supereats from "../../assets/SuperEats.jpg";
 import Cinema from "../../assets/cinema.png";
-import AIWorkSheetGenerator from "../../assets/AIWorkSheetGenerator.png";
+import AIWorkSheetGenerator from "../../assets/AIWorksheetGenerator.png";
 import FLWeb from "../../assets/FLWeb.png";
 import IndiaTourBook from "../../assets/IndiaTourBook.jpeg";
 import FlammyEngine from "../../assets/FlammyEngine.png";

@@ -11,19 +11,40 @@ const Projects = React.lazy(() => import("../components/projects/projects"));
 function home() {
   return (
     <>
-      <FadeInRepeat>
-        <Hero />
-      </FadeInRepeat>
-      <FadeInSection>
-        <About />
-      </FadeInSection>
+      <section className="centered-section">
+        <div className="centered-section-inner">
+          <FadeInRepeat>
+            <Hero />
+          </FadeInRepeat>
+        </div>
+      </section>
 
-      <Experience />
-      <Suspense
-        fallback={<div className="text-gray-500 animate-pulse">Loading...</div>}
-      >
-        <Projects />
-      </Suspense>
+      <section className="centered-section">
+        <div className="centered-section-inner">
+          <FadeInSection>
+            <About />
+          </FadeInSection>
+        </div>
+      </section>
+
+      <section className="centered-section">
+        <div className="centered-section-inner">
+          <Experience />
+        </div>
+      </section>
+
+      <section className="centered-section">
+        <div className="centered-section-inner">
+          <Suspense
+            fallback={
+              <div className="text-gray-500 animate-pulse">Loading...</div>
+            }
+          >
+            <Projects />
+          </Suspense>
+        </div>
+      </section>
+
       <Footer />
     </>
   );
